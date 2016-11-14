@@ -16,6 +16,16 @@
         body {
             padding-top: 80px;
         }
+        @font-face {
+            font-family: SanFran;
+            src: url(bootstrap/fonts/sanfran/SanFranciscoText-Regular.otf);
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: SanFran;
+            src: url(bootstrap/fonts/sanfran/SanFranciscoText-Bold.otf);
+            font-weight: bold;
+        }
         #trailer .modal-dialog {
             margin-top: 200px;
             width: 640px;
@@ -31,13 +41,9 @@
             width: 100%;
             height: 100%;
         }
-        .movie-tile {
-            margin-bottom: 20px;
-            padding-top: 20px;
-        }
         .movie-tile:hover {
-            background-color: #EEE;
             cursor: pointer;
+            margin-top:1px;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -52,6 +58,26 @@
             top: 0;
             background-color: white;
         }
+        .storyline {
+            font-size:.85em;
+            font-family: SanFran;
+            margin-top:10px;
+        }
+        .mtitle {
+            font-size:1.4em;
+            font-family: SanFran;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .imgposter {
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        div {
+            font-family: SanFran;
+        }
+
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -111,123 +137,93 @@
       
 <div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="vsEuOw3ihbs" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:110%;">
-    <div class="w3-container">
-      <img src="http://bit.ly/2fi1uVM" height="220px">
+  <div class="w3-card-4" style="width:100%;">
+    <div class="w3-container imgposter">
+      <img src="http://bit.ly/2fi1uVM" width="120px;">
     </div>
 
-    <header class="w3-container">
-    <h2>Grandma's Boy</h2>
+    <header class="w3-container w3-border-bottom w3-border-red">
+    <h2 class="mtitle">Grandma's Boy</h2>
     </header>
 
     <footer class="w3-container">
-      <p>A 35 year old video game tester hasto move in with his grandma and her two old lady roommates.
+      <p class="storyline">A 35 year old video game tester hasto move in with his grandma and her two old lady roommates.</p>
     </footer>
   </div>
 </div>
 </div>
-
-<!---<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="vsEuOw3ihbs" data-toggle="modal" data-target="#trailer">
-    <img src="http://bit.ly/2fi1uVM" width="150" height="233">
-    <h2>Grandma's Boy</h2>
-    <p>A 35 year old video game tester hasto move in with his grandma and her two old lady roommates.</p>
-</div>--->
 
 <div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="SB0YRDkUlnk" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:110%;">
-    <div class="w3-container">
-      <img src="http://bit.ly/2eorTC7" height="220px">
+  <div class="w3-card-4" style="width:100%;">
+    <div class="w3-container imgposter">
+      <img src="http://bit.ly/2eorTC7" width="120px;">
     </div>
 
-    <header class="w3-container">
-    <h2>Deadpool</h2>
+    <header class="w3-container w3-border-bottom w3-border-red">
+    <h2 class="mtitle">Deadpool</h2>
     </header>
 
     <footer class="w3-container">
-      <p>A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.
+      <p class="storyline">A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.</p>
     </footer>
   </div>
 </div>
 </div>
-
-<!---<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="SB0YRDkUlnk" data-toggle="modal" data-target="#trailer">
-    <img src="http://bit.ly/2eorTC7" width="150" height="233">
-    <h2>Deadpool</h2>
-    <p>A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.</p>
-</div>--->
 
 <div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="EXeTwQWrcwY" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:110%;">
-    <div class="w3-container">
-      <img src="http://bit.ly/2fDGK8W" height="220px">
+  <div class="w3-card-4" style="width:100%;">
+    <div class="w3-container imgposter">
+      <img src="http://bit.ly/2fDGK8W" width="120px;">
     </div>
 
-    <header class="w3-container">
-    <h2>The Dark Knight</h2>
+    <header class="w3-container w3-border-bottom w3-border-red">
+    <h2 class="mtitle">The Dark Knight</h2>
     </header>
 
     <footer class="w3-container">
-      <p>When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.
+      <p class="storyline">When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.</p>
     </footer>
   </div>
 </div>
 </div>
-
-<!---<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="EXeTwQWrcwY" data-toggle="modal" data-target="#trailer">
-    <img src="http://bit.ly/2fDGK8W" width="150" height="233">
-    <h2>The Dark Knight</h2>
-    <p>When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.</p>
-</div>--->
 
 <div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="oc3LtcVT1WA" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:110%;">
-    <div class="w3-container">
-      <img src="http://bit.ly/2fWWffY" height="220px">
+  <div class="w3-card-4" style="width:100%;">
+    <div class="w3-container imgposter">
+      <img src="http://bit.ly/2fWWffY" width="120px;">
     </div>
 
-    <header class="w3-container">
-    <h2>Mean Machine</h2>
+    <header class="w3-container w3-border-bottom w3-border-red">
+    <h2 class="mtitle">Mean Machine</h2>
     </header>
 
     <footer class="w3-container">
-      <p>A soccer star jailed for assault leads a group of inmates in a match against prison guards.
+      <p class="storyline">A soccer star jailed for assault leads a group of inmates in a match against prison guards.</p>
     </footer>
   </div>
 </div>
 </div>
-
-<!---<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="oc3LtcVT1WA" data-toggle="modal" data-target="#trailer">
-    <img src="http://bit.ly/2fWWffY" width="150" height="233">
-    <h2>Mean Machine</h2>
-    <p>A soccer star jailed for assault leads a group of inmates in a match against prison guards.</p>
-</div>--->
 
 <div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="sY1S34973zA" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:110%;">
-    <div class="w3-container">
-      <img src="http://bit.ly/2fDH6MW" height="220px">
+  <div class="w3-card-4" style="width:100%;">
+    <div class="w3-container imgposter">
+      <img src="http://bit.ly/2fDH6MW" width="120px;">
     </div>
 
-    <header class="w3-container">
-    <h2>The Godfather</h2>
+    <header class="w3-container w3-border-bottom w3-border-red">
+    <h2 class="mtitle">The Godfather</h2>
     </header>
 
     <footer class="w3-container">
-      <p>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
+      <p class="storyline">The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</p>
     </footer>
   </div>
 </div>
 </div>
-
-<!---<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="sY1S34973zA" data-toggle="modal" data-target="#trailer">
-    <img src="http://bit.ly/2fDH6MW" width="150" height="233">
-    <h2>The Godfather</h2>
-    <p>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</p>
-</div>--->
 
     </div>
   </body>
