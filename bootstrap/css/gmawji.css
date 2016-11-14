@@ -1,0 +1,14 @@
+}
+@media (min-width: 768px) {
+  .navbar-site {
+    float: right;
+  }
+}
+.navbar-sites {
+  float: right;
+  text-align: right;
+  height: 50px;
+  padding: 17px 15px;
+  font-size: 13px;
+  line-height: 20px;
+}
