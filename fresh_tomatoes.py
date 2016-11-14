@@ -15,6 +15,7 @@ main_page_head = '''
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
     <link rel="stylesheet" href="bootstrap/css/gmawji.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
@@ -108,7 +109,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img src="gmawji_fav_movies.png/" width=120"></a>
+            <a class="navbar-brand" href="#"><img src=gmawji_fav_movies.png/ width=120"></a>
           </div>
           <div class="navbar-site">
             <a class="navbar-sites" href="http://www.gmawji.com" target="_blank">www.gmawji.com</a>
@@ -127,10 +128,28 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+<div class="w3-container">
+  <div class="w3-card-4" style="width:110%;">
+    <div class="w3-container">
+      <img src="{poster_image_url}" height="220px">
+    </div>
+
+    <header class="w3-container">
+    <h2>{movie_title}</h2>
+    </header>
+
+    <footer class="w3-container">
+      <p>{movie_storyline}
+    </footer>
+  </div>
+</div>
+</div>
+
+<!---<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="150" height="233">
     <h2>{movie_title}</h2>
     <p>{movie_storyline}</p>
-</div>
+</div>--->
 '''
 
 
