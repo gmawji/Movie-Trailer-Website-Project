@@ -22,6 +22,16 @@ main_page_head = '''
         body {
             padding-top: 80px;
         }
+        @font-face {
+            font-family: SanFran;
+            src: url(bootstrap/fonts/sanfran/SanFranciscoText-Regular.otf);
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: SanFran;
+            src: url(bootstrap/fonts/sanfran/SanFranciscoText-Bold.otf);
+            font-weight: bold;
+        }
         #trailer .modal-dialog {
             margin-top: 200px;
             width: 640px;
@@ -37,13 +47,9 @@ main_page_head = '''
             width: 100%;
             height: 100%;
         }
-        .movie-tile {
-            margin-bottom: 20px;
-            padding-top: 20px;
-        }
         .movie-tile:hover {
-            background-color: #EEE;
             cursor: pointer;
+            margin-top:1px;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -58,6 +64,26 @@ main_page_head = '''
             top: 0;
             background-color: white;
         }
+        .storyline {
+            font-size:.85em;
+            font-family: SanFran;
+            margin-top:10px;
+        }
+        .mtitle {
+            font-size:1.4em;
+            font-family: SanFran;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .imgposter {
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        div {
+            font-family: SanFran;
+        }
+
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -129,27 +155,21 @@ main_page_content = '''
 movie_tile_content = '''
 <div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:110%;">
-    <div class="w3-container">
-      <img src="{poster_image_url}" height="220px">
+  <div class="w3-card-4" style="width:100%;">
+    <div class="w3-container imgposter">
+      <img src="{poster_image_url}" width="120px;">
     </div>
 
-    <header class="w3-container">
-    <h2>{movie_title}</h2>
+    <header class="w3-container w3-border-bottom w3-border-red">
+    <h2 class="mtitle">{movie_title}</h2>
     </header>
 
     <footer class="w3-container">
-      <p>{movie_storyline}
+      <p class="storyline">{movie_storyline}</p>
     </footer>
   </div>
 </div>
 </div>
-
-<!---<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="150" height="233">
-    <h2>{movie_title}</h2>
-    <p>{movie_storyline}</p>
-</div>--->
 '''
 
 
