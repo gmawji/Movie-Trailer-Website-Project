@@ -14,8 +14,9 @@ To learn and grasp techniques learnt in Python taught in my Udacity course.
 
 ## Installation
 
-Will be added later.
+Dependencies to use code:
+Python 2.7
 
 ## Tests
 
-Will be added later.
+HTML Outputs correct and usable web page with no errors.
