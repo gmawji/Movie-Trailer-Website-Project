@@ -77,7 +77,6 @@ main_page_head = '''
             font-size:.85em;
             font-family: SanFran;
             margin-top:10px;
-            text-align: justify;
         }
         .mtitle {
             font-size:1.4em;
