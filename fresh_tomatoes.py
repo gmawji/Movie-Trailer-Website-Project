@@ -32,6 +32,11 @@ main_page_head = '''
             src: url(bootstrap/fonts/sanfran/SanFranciscoText-Bold.otf);
             font-weight: bold;
         }
+        @font-face {
+            font-family: SanFran;
+            src: url(bootstrap/fonts/sanfran/SanFranciscoText-Light.otf);
+            font-weight: 100;
+        }
         #trailer .modal-dialog {
             margin-top: 200px;
             width: 640px;
@@ -47,9 +52,13 @@ main_page_head = '''
             width: 100%;
             height: 100%;
         }
+        .movie-tile {
+            margin-top:20px;
+            margin-bottom:20px;
+        }
         .movie-tile:hover {
             cursor: pointer;
-            margin-top:1px;
+            margin-top:21px;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -68,6 +77,7 @@ main_page_head = '''
             font-size:.85em;
             font-family: SanFran;
             margin-top:10px;
+            text-align: justify;
         }
         .mtitle {
             font-size:1.4em;
@@ -79,11 +89,28 @@ main_page_head = '''
             background-repeat: no-repeat;
             background-size: contain;
         }
-
+        .rating{
+            font-family: SanFran;
+            font-size:.85em;
+            font-weight: 100;
+            float:left;
+            text-align:left;
+            margin-top: 10px;
+        }
+        .runt{
+            font-family: SanFran;
+            font-size:.85em;
+            font-weight: 100;
+            text-align: right;
+            margin-top: 10px;
+        }
+        .myear {
+            font-size:1.2em;
+            font-family: SanFran;
+        }
         div {
             font-family: SanFran;
         }
-
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -135,7 +162,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img src=gmawji_fav_movies.png/ width=120"></a>
+            <a class="navbar-brand" href="fresh_tomatoes.html"><img src=img/gmawji_fav_movies.png/ width=120"></a>
           </div>
           <div class="navbar-site">
             <a class="navbar-sites" href="http://www.gmawji.com" target="_blank">www.gmawji.com</a>
@@ -155,18 +182,24 @@ main_page_content = '''
 movie_tile_content = '''
 <div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:100%;">
+  <div class="w3-card-4" style="width:"100%;">
     <div class="w3-container imgposter">
       <img src="{poster_image_url}" width="120px;">
     </div>
 
-    <header class="w3-container w3-border-bottom w3-border-red">
-    <h2 class="mtitle">{movie_title}</h2>
+    <header class="w3-container w3-border-bottom w3-border-black">
+        <h2 class="mtitle">{movie_title}</h2>
+        <p class="myear">({year})</p>
     </header>
 
     <footer class="w3-container">
-      <p class="storyline">{movie_storyline}</p>
+        <p class="storyline">{movie_storyline}</p>
     </footer>
+
+    <div class="w3-container w3-border-top w3-border-black">
+        <p class="rating">Rating: {valid_ratings}</p>
+        <p class="runt">Runtime: {runtime}</p>
+    </div>
   </div>
 </div>
 </div>
@@ -190,7 +223,10 @@ def create_movie_tiles_content(movies):
             movie_title=movie.title,
             movie_storyline=movie.storyline,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            valid_ratings=movie.valid_ratings,
+            runtime=movie.runtime,
+            year=movie.year
         )
     return content
 
