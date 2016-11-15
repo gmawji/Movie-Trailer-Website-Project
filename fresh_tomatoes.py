@@ -143,7 +143,7 @@ main_page_head = '''
   	// `apply` is equivalent to passing each height as an argument
   		var maxHeight = Math.max.apply(null, elementHeights);
   	// Set each height to the max height
-  		$('.w3-card-4').height(maxHeight-155);
+  		$('.w3-card-4').height(maxHeight-150);
 		});
 	</script>
 </head>

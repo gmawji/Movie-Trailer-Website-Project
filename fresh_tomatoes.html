@@ -52,7 +52,6 @@
         }
         .movie-tile:hover {
             cursor: pointer;
-            margin-top:21px;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -127,6 +126,7 @@
         });
     </script>
     <script type="text/javascript" charset="utf-8">
+    //Solution found on stackoverflow
     //Find largest movie tiles size and resize all other movie tiles.
     	$(document).ready(function() {
   	// Get an array of all element heights
@@ -137,7 +137,7 @@
   	// `apply` is equivalent to passing each height as an argument
   		var maxHeight = Math.max.apply(null, elementHeights);
   	// Set each height to the max height
-  		$('.w3-card-4').height(maxHeight-155);
+  		$('.w3-card-4').height(maxHeight-150);
 		});
 	</script>
 </head>
