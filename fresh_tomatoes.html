@@ -14,7 +14,7 @@
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
         body {
-            padding-top: 80px;
+            padding-top: 50px;
         }
         @font-face {
             font-family: SanFran;
@@ -52,7 +52,6 @@
         }
         .movie-tile:hover {
             cursor: pointer;
-            margin-top:21px;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -77,10 +76,6 @@
             font-family: SanFran;
             font-weight: bold;
             margin-top: 10px;
-        }
-        .imgposter {
-            background-repeat: no-repeat;
-            background-size: contain;
         }
         .rating{
             font-family: SanFran;
@@ -130,6 +125,20 @@
           });
         });
     </script>
+    <script type="text/javascript" charset="utf-8">
+    //Find largest movie tiles size and resize all other movie tiles.
+    	$(document).ready(function() {
+  	// Get an array of all element heights
+  		var elementHeights = $('.w3-card-4').map(function() {
+    	return $(this).height();
+  		}).get();
+  	// Math.max takes a variable number of arguments
+  	// `apply` is equivalent to passing each height as an argument
+  		var maxHeight = Math.max.apply(null, elementHeights);
+  	// Set each height to the max height
+  		$('.w3-card-4').height(maxHeight-155);
+		});
+	</script>
 </head>
 
   <body>
@@ -151,7 +160,7 @@
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="fresh_tomatoes.html"><img src="img/gmawji_fav_movies.png" width="120"></a>
+            <a class="navbar-brand"><img src="img/gmawji_fav_movies.png" width="120"></a>
           </div>
           <div class="navbar-site">
             <a class="navbar-sites" href="http://www.gmawji.com" target="_blank">www.gmawji.com</a>
@@ -161,21 +170,21 @@
     </div>
     <div class="container">
       
-<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="vsEuOw3ihbs" data-toggle="modal" data-target="#trailer">
+<div class="w3-col m4 movie-tile text-center" data-trailer-youtube-id="vsEuOw3ihbs" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:"100%;">
-    <div class="w3-container imgposter">
+  <div class="w3-card-4">
+    <div class="w3-image">
       <img src="http://bit.ly/2fi1uVM" width="120px;">
     </div>
 
-    <header class="w3-container w3-border-bottom w3-border-black">
+    <header class="w3-border-bottom w3-border-black">
         <h2 class="mtitle">Grandma's Boy</h2>
         <p class="myear">(2006)</p>
     </header>
 
-    <footer class="w3-container">
+    <div class="w3-container">
         <p class="storyline">A 35 year old video game tester has to move in with his grandma and her two old lady roommates.</p>
-    </footer>
+    </div>
 
     <div class="w3-container w3-border-top w3-border-black">
         <p class="rating">Rating: R</p>
@@ -185,21 +194,21 @@
 </div>
 </div>
 
-<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="SB0YRDkUlnk" data-toggle="modal" data-target="#trailer">
+<div class="w3-col m4 movie-tile text-center" data-trailer-youtube-id="SB0YRDkUlnk" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:"100%;">
-    <div class="w3-container imgposter">
+  <div class="w3-card-4">
+    <div class="w3-image">
       <img src="http://bit.ly/2eorTC7" width="120px;">
     </div>
 
-    <header class="w3-container w3-border-bottom w3-border-black">
+    <header class="w3-border-bottom w3-border-black">
         <h2 class="mtitle">Deadpool</h2>
         <p class="myear">(2016)</p>
     </header>
 
-    <footer class="w3-container">
+    <div class="w3-container">
         <p class="storyline">A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.</p>
-    </footer>
+    </div>
 
     <div class="w3-container w3-border-top w3-border-black">
         <p class="rating">Rating: R</p>
@@ -209,21 +218,21 @@
 </div>
 </div>
 
-<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="EXeTwQWrcwY" data-toggle="modal" data-target="#trailer">
+<div class="w3-col m4 movie-tile text-center" data-trailer-youtube-id="EXeTwQWrcwY" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:"100%;">
-    <div class="w3-container imgposter">
+  <div class="w3-card-4">
+    <div class="w3-image">
       <img src="http://bit.ly/2fDGK8W" width="120px;">
     </div>
 
-    <header class="w3-container w3-border-bottom w3-border-black">
+    <header class="w3-border-bottom w3-border-black">
         <h2 class="mtitle">The Dark Knight</h2>
         <p class="myear">(2008)</p>
     </header>
 
-    <footer class="w3-container">
+    <div class="w3-container">
         <p class="storyline">When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.</p>
-    </footer>
+    </div>
 
     <div class="w3-container w3-border-top w3-border-black">
         <p class="rating">Rating: PG-13</p>
@@ -233,21 +242,21 @@
 </div>
 </div>
 
-<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="oc3LtcVT1WA" data-toggle="modal" data-target="#trailer">
+<div class="w3-col m4 movie-tile text-center" data-trailer-youtube-id="oc3LtcVT1WA" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:"100%;">
-    <div class="w3-container imgposter">
+  <div class="w3-card-4">
+    <div class="w3-image">
       <img src="http://bit.ly/2fWWffY" width="120px;">
     </div>
 
-    <header class="w3-container w3-border-bottom w3-border-black">
+    <header class="w3-border-bottom w3-border-black">
         <h2 class="mtitle">Mean Machine</h2>
         <p class="myear">(2001)</p>
     </header>
 
-    <footer class="w3-container">
+    <div class="w3-container">
         <p class="storyline">A soccer star jailed for assault leads a group of inmates in a match against prison guards.</p>
-    </footer>
+    </div>
 
     <div class="w3-container w3-border-top w3-border-black">
         <p class="rating">Rating: R</p>
@@ -257,21 +266,21 @@
 </div>
 </div>
 
-<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="sY1S34973zA" data-toggle="modal" data-target="#trailer">
+<div class="w3-col m4 movie-tile text-center" data-trailer-youtube-id="sY1S34973zA" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:"100%;">
-    <div class="w3-container imgposter">
+  <div class="w3-card-4">
+    <div class="w3-image">
       <img src="http://bit.ly/2fDH6MW" width="120px;">
     </div>
 
-    <header class="w3-container w3-border-bottom w3-border-black">
+    <header class="w3-border-bottom w3-border-black">
         <h2 class="mtitle">The Godfather</h2>
         <p class="myear">(1972)</p>
     </header>
 
-    <footer class="w3-container">
+    <div class="w3-container">
         <p class="storyline">The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</p>
-    </footer>
+    </div>
 
     <div class="w3-container w3-border-top w3-border-black">
         <p class="rating">Rating: R</p>
@@ -281,21 +290,21 @@
 </div>
 </div>
 
-<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="nH1Ulp4PBtA" data-toggle="modal" data-target="#trailer">
+<div class="w3-col m4 movie-tile text-center" data-trailer-youtube-id="nH1Ulp4PBtA" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:"100%;">
-    <div class="w3-container imgposter">
+  <div class="w3-card-4">
+    <div class="w3-image">
       <img src="http://bit.ly/2eV8p35" width="120px;">
     </div>
 
-    <header class="w3-container w3-border-bottom w3-border-black">
+    <header class="w3-border-bottom w3-border-black">
         <h2 class="mtitle">Friday</h2>
         <p class="myear">(1995)</p>
     </header>
 
-    <footer class="w3-container">
+    <div class="w3-container">
         <p class="storyline">Two homies, Smokey and Craig, smoke a dope dealer's weed and try to figure a way to get the $200 they owe to the dealer by 10 p.m. that same night. In that time, they smoke more weed and get jacked and shot at in a drive-by.</p>
-    </footer>
+    </div>
 
     <div class="w3-container w3-border-top w3-border-black">
         <p class="rating">Rating: R</p>

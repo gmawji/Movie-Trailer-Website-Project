@@ -20,7 +20,7 @@ main_page_head = '''
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
         body {
-            padding-top: 80px;
+            padding-top: 50px;
         }
         @font-face {
             font-family: SanFran;
@@ -58,7 +58,6 @@ main_page_head = '''
         }
         .movie-tile:hover {
             cursor: pointer;
-            margin-top:21px;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -83,10 +82,6 @@ main_page_head = '''
             font-family: SanFran;
             font-weight: bold;
             margin-top: 10px;
-        }
-        .imgposter {
-            background-repeat: no-repeat;
-            background-size: contain;
         }
         .rating{
             font-family: SanFran;
@@ -136,6 +131,20 @@ main_page_head = '''
           });
         });
     </script>
+    <script type="text/javascript" charset="utf-8">
+    //Find largest movie tiles size and resize all other movie tiles.
+    	$(document).ready(function() {
+  	// Get an array of all element heights
+  		var elementHeights = $('.w3-card-4').map(function() {
+    	return $(this).height();
+  		}).get();
+  	// Math.max takes a variable number of arguments
+  	// `apply` is equivalent to passing each height as an argument
+  		var maxHeight = Math.max.apply(null, elementHeights);
+  	// Set each height to the max height
+  		$('.w3-card-4').height(maxHeight-155);
+		});
+	</script>
 </head>
 '''
 
@@ -161,7 +170,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="fresh_tomatoes.html"><img src="img/gmawji_fav_movies.png" width="120"></a>
+            <a class="navbar-brand"><img src="img/gmawji_fav_movies.png" width="120"></a>
           </div>
           <div class="navbar-site">
             <a class="navbar-sites" href="http://www.gmawji.com" target="_blank">www.gmawji.com</a>
@@ -179,21 +188,21 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-xs-5 col-sm-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+<div class="w3-col m4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
 <div class="w3-container">
-  <div class="w3-card-4" style="width:"100%;">
-    <div class="w3-container imgposter">
+  <div class="w3-card-4">
+    <div class="w3-image">
       <img src="{poster_image_url}" width="120px;">
     </div>
 
-    <header class="w3-container w3-border-bottom w3-border-black">
+    <header class="w3-border-bottom w3-border-black">
         <h2 class="mtitle">{movie_title}</h2>
         <p class="myear">({year})</p>
     </header>
 
-    <footer class="w3-container">
+    <div class="w3-container">
         <p class="storyline">{movie_storyline}</p>
-    </footer>
+    </div>
 
     <div class="w3-container w3-border-top w3-border-black">
         <p class="rating">Rating: {valid_ratings}</p>
