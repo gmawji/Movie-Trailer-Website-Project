@@ -132,6 +132,7 @@ main_page_head = '''
         });
     </script>
     <script type="text/javascript" charset="utf-8">
+    //Solution found on stackoverflow
     //Find largest movie tiles size and resize all other movie tiles.
     	$(document).ready(function() {
   	// Get an array of all element heights
